@@ -5,18 +5,18 @@ namespace ShowMoney
 {
     class Program
     {
-        // Définition de la déléguée ShowMoney
+        // Définition de la delegate ShowMoney
         delegate void ShowMoney(float amount);
 
         static void Main(string[] args)
         {
             float amount = 12.15f ;// On ajoute le 'f' pour dire qu'on a un nombre flottant
 
-            // Instanciation de la déléguée avec la méthode DisplayInDollars de MoneyDisplayer
+            // Instanciation de la delegate avec la méthode DisplayInDollars de MoneyDisplayer
             ShowMoney showMoney = MoneyDisplayer.DisplayInDollars;
             showMoney(amount);
 
-            // Réaffectation de la déléguée avec la méthode DisplayInEuros de MoneyDisplayer
+            // Réaffectation de la delegate avec la méthode DisplayInEuros de MoneyDisplayer
             showMoney = MoneyDisplayer.DisplayInEuros;
             showMoney(amount);
         }

@@ -11,13 +11,15 @@ namespace projDelegates
         // Méthode pour afficher en dollars
         public static void DisplayInDollars(float amount)
         {
-            Console.WriteLine($"{amount:C2} $");
+            Console.WriteLine($"La somme d'argent en dollars est : {amount} $");
         }
 
         // Méthode pour afficher en euros
         public static void DisplayInEuros(float amount)
         {
-            Console.WriteLine($"{amount:C2} €");
+            // On s'assure que l'encodage supporte les caractères spéciaux comme €
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine($"La somme d'argent en euros est : {amount} €");
         }
     }
 }
