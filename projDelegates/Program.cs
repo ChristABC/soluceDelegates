@@ -13,11 +13,11 @@ namespace ShowMoney
             float amount = 12.15f ;// On ajoute le 'f' pour dire qu'on a un nombre flottant
 
             // Instanciation de la delegate avec la méthode DisplayInDollars de MoneyDisplayer
-            ShowMoney showMoney = MoneyDisplayer.DisplayInDollars;
+            ShowMoney showMoney = MoneyDisplayer.SommeEnDollars;
             showMoney(amount);
 
             // Réaffectation de la delegate avec la méthode DisplayInEuros de MoneyDisplayer
-            showMoney = MoneyDisplayer.DisplayInEuros;
+            showMoney = MoneyDisplayer.SommeEnEuros;
             showMoney(amount);
         }
     }
